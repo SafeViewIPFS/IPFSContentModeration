@@ -8,7 +8,7 @@ function update(dataObj) {
             protocol: 'https:',
             hostname: 'api.jsonbin.io',
             port: 443,
-            path: '/v3/b/61926c5501558c731cc2bf47',
+            path: '/v3/b/6196368962ed886f9150cd5e',
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -47,7 +47,7 @@ function fetch() {
             protocol: 'https:',
             hostname: 'api.jsonbin.io',
             port: 443,
-            path: '/v3/b/61926c5501558c731cc2bf47',
+            path: '/v3/b/6196368962ed886f9150cd5e',
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

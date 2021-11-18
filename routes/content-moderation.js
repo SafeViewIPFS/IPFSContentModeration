@@ -20,7 +20,7 @@ router.get('/add', function (req, res, next) {
   }
 
   analyzeImage(cid).then(analysis => {
-    if (analysis.adult && analysis.adult && analysis.adult.isAdultContent === false) {
+    if (analysis && analysis.adult && analysis.adult.isAdultContent === false && analysis.adult.isRacyContent === false) {
       // add to bloom filter
       this.bloomFilter.add(cid);
 
