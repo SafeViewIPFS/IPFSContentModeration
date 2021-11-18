@@ -22,7 +22,7 @@
 
   <script>
     function onBodyLoad() {
-      var blockNsfw = false;
+      var blockNsfw = true;
 
       function refreshCIDs() {
         let cidList = [
@@ -70,7 +70,7 @@
     <h1 class="display-4">SafeView IPFS Demo</h1>
     <p class="lead">Instant content moderation tool for IPFS links</p>
 
-    <input type="checkbox" class="btn-check" id="btn_enable_safeview" autocomplete="off">
+    <input type="checkbox" checked="true" class="btn-check" id="btn_enable_safeview" autocomplete="off">
     <label class="btn btn-outline-primary" for="btn_enable_safeview">Enable SafeView</label><br>
   </div>
   <div class="container">
