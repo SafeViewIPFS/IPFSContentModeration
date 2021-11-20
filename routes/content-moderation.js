@@ -32,7 +32,7 @@ router.get('/add', function (req, res, next) {
       jsonStore.update(newbf);
       res.send(cid + ' - CID is valid.\nCID has been added to bloom filter');
     } else {
-      res.send('Not Added cid: ' + cid);
+      res.send('Rejected. Not Added cid: ' + cid);
     }
   })
 

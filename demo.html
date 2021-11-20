@@ -11,6 +11,12 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
   <title>SafeView-IPFS Demo</title>
+  <style>
+    .span_cid {
+      font-size: .8em;
+      color: white;
+    }
+  </style>
 </head>
 
 <body onload="onBodyLoad()">
@@ -39,6 +45,7 @@
         ];
 
         let imageTag = $('img').toArray();
+        let labelTag = $(".span_cid").toArray();
 
         imageTag.forEach((img, index) => {
           if (cidList.length >= index + 1) {
@@ -51,6 +58,7 @@
             } else {
               $(img).attr("src", 'https://gateway.pinata.cloud/ipfs/' + cidList[index]);
             }
+            $(labelTag[index]).html(cidList[index]);
 
           }
         });
@@ -78,30 +86,39 @@
     <div class="row row-cols-3">
       <div class="col mb-2">
         <img style="width: 20em; height: 13em;">
+        <span class="span_cid"></span>
       </div>
       <div class="col mb-2">
         <img style="width: 20em; height: 13em;">
+        <span class="span_cid"></span>
       </div>
       <div class="col mb-2">
         <img style="width: 20em; height: 13em;">
+        <span class="span_cid"></span>
       </div>
       <div class="col mb-2">
         <img style="width: 20em; height: 13em;">
+        <span class="span_cid"></span>
       </div>
       <div class="col mb-2">
         <img style="width: 20em; height: 13em;">
+        <span class="span_cid"></span>
       </div>
       <div class="col mb-2">
         <img style="width: 20em; height: 13em;">
+        <span class="span_cid"></span>
       </div>
       <div class="col mb-2">
         <img style="width: 20em; height: 13em;">
+        <span class="span_cid"></span>
       </div>
       <div class="col mb-2">
         <img style="width: 20em; height: 13em;">
+        <span class="span_cid"></span>
       </div>
       <div class="col mb-2">
         <img style="width: 20em; height: 13em;">
+        <span class="span_cid"></span>
       </div>
 </body>
 
