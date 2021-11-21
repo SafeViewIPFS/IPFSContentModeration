@@ -100,4 +100,14 @@ function analyzeImage(cidUrl) {
 
 }
 
+router.get('/cid', function(req, res, next) {
+ if(this.latestCID) {
+  res.send(this.latestCID);
+ } else {
+  res.send('Not yet there');
+ }
+  
+});
+
+
 module.exports = router;

@@ -1,4 +1,6 @@
 const https = require('https');
+const ipfs = require('./ipfs');
+const fs = require('fs');
 
 function update(dataObj) {
     return new Promise((resolve, reject) => {
@@ -37,6 +39,9 @@ function update(dataObj) {
 
         req.write(data)
         req.end();
+
+        // fs.writeFileSync("./data/bloom-filter-data.json",JSON.stringify(dataObj),{encoding:'utf8',flag:'w'});
+        ipfs(JSON.stringify(dataObj));
     })
 
 }
